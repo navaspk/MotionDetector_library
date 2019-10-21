@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MotionDetector</string>
+    <string name="notif_server_starting">Started monitoring\u2026</string>
+    <string name="notif_title">Monitor running</string>
+
+    <string name="noti_received">Free fall detected</string>
+    <string name="detected">Detecting</string>
+    <string name="duration">duration</string>
+    <string name="time">time</string>
+</resources>

@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:name="http://schemas.android.com/apk/res-auto"
+    package="com.bird.motiondetector">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application >
+
+        <service
+            android:name=".plugin.devicemotion.MotionDetectorService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="SenderManagerService"
+            android:process=":monitor">
+            <intent-filter>
+                <action android:name="START_MONITOR_MOTION" />
+            </intent-filter>
+        </service>​
+
+        <provider
+            android:authorities="${applicationId}.MotionDetectorProvider"
+            android:name="com.bird.motiondetector.plugin.MotionDetectorProvider">
+        </provider>
+
+    </application>
+</manifest>
